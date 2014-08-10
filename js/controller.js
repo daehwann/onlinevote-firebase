@@ -20,7 +20,7 @@ app.controller('VoteViewController', ['$scope', 'FirebaseUtil',
 app.controller('VoteController', ['$scope', 'FirebaseUtil', 
 	function($scope, FirebaseUtil) {
 		
-			
+
 		$scope.vote = function(opinion) {
 			var sync = FirebaseUtil.getSync();		
 			$scope.opinions = sync.$asArray();
@@ -29,7 +29,7 @@ app.controller('VoteController', ['$scope', 'FirebaseUtil',
 				opinion : opinion,
 				comment : $scope.comment
 			})
-			$scope.comment = "";
+			location.href='#/voteresult';
 		}
 	}
 ])
