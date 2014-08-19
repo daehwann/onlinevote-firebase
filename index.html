@@ -9,16 +9,21 @@
 		<script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
 		<!-- AngularFire -->
 		<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
-
+		<!-- fingerprintjs -->
+		<script src="libs/fingerprint.js"></script>
 		<script src="js/route.js"></script>
 		<script src="js/services.js"></script>
 		<script src="js/controller.js"></script>
 
 	</head>
 	<body ng-app="voteApp">
+		<nav>
+			<a href="#/vote">투표하기</a>
+			<a href="#/voteresult">투표결과</a>
+		</nav>
+		<hr />
 		<div ng-view></div>
-		
-			
+
 		
 	</body>
 	<!-- AngularJS -->

@@ -4,8 +4,12 @@
 		<h1>{{ percentage( (data | filter : {opinion:'LIKE'}) )}} %</h1>
 		<div>Total Vote : {{data.length}}</div>
 	</div>
-	<div ng-repeat="opinion in data ">
-		<p><b>{{opinion.opinion}}</b><br />{{opinion.comment}}</p>
-
-	</div>
+	<ul>
+		<li ng-repeat="opinion in data ">
+			<p>
+				<b>{{opinion.opinion}}</b><br />
+				{{opinion.comment}} by {{opinion.fingerprint}}
+			</p>
+		</li>
+	</ul>
 </div>
